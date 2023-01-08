@@ -1,0 +1,27 @@
+<!-- 组合小车底盘与摄像头与雷达 -->
+<robot name="UGV" xmlns:xacro="http://wiki.ros.org/xacro">
+<!-- 部件 -->
+    
+    <!-- 惯性矩阵 -->
+    <xacro:include filename="physical.xacro" />
+
+    <xacro:include filename="base.xacro" />
+    <xacro:include filename="camera.xacro" />
+    <xacro:include filename="laser.xacro" />
+
+<!-- 控制与信息 -->
+
+    <!-- 移动控制 -->
+    <xacro:include filename="move.xacro" />
+
+    <!-- 选择要使用的传感器 -->
+
+    <!-- 雷达 -->
+    <!-- <xacro:include filename="laser_sensor.xacro" /> -->
+
+    <!-- 相机 -->
+    <!-- <xacro:include filename="camera_sensor.xacro" /> -->
+
+    <!-- 深度相机 -->
+    <xacro:include filename="depth_camera_sensor.xacro" />
+</robot>

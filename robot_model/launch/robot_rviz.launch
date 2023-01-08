@@ -1,0 +1,10 @@
+<launch>
+    <!-- 将模型传递到参数服务器 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find robot_model)/xacro/robot.xacro" />
+
+    <!-- 启动 rviz 查看传感器信息 -->
+    <node pkg="rviz" type="rviz" name="rviz"/>
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+
+</launch>

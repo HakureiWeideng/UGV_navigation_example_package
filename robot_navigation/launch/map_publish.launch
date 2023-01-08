@@ -1,0 +1,8 @@
+<launch>
+    <!-- 设置地图的元数据文件（元数据文件内包含有地图文件路径） -->
+    <arg name="map" default="nav.yaml" />
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find robot_navigation)/map/$(arg map)"/>
+    <!-- 启动 rviz 查看 -->
+    <node pkg="rviz" type="rviz" name="rviz"/>
+</launch>
